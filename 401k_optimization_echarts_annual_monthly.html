@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>401(k) & Roth 401(k) Contribution Optimization (Annual & Monthly)</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+</head>
+<body>
+    <div id="echarts_opt_annual" style="width: 100%; height: 400px;"></div>
+    <div id="echarts_opt_monthly" style="width: 100%; height: 400px; margin-top: 30px;"></div>
+    <script>
+    var chartDomA = document.getElementById('echarts_opt_annual');
+    var myChartA = echarts.init(chartDomA);
+    var optionA = {"title": {"text": "401(k) Contribution vs. Take-home Pay, Tax, FICA, and Roth 401(k) (Annual) | Filing Status: Single | Gross Income: $68,000 | Roth 401k: 10% ($6,800/year)", "left": "center"}, "tooltip": {"trigger": "axis", "axisPointer": {"type": "cross"}}, "legend": {"data": ["Net Income (Annual)", "401(k) Contribution (Annual)", "Federal Tax (Annual)", "Total FICA (Annual)", "Roth 401(k) (Annual)"], "top": 30}, "toolbox": {"feature": {"saveAsImage": {}}}, "xAxis": {"type": "category", "name": "401(k) Contribution Rate (%)", "data": [0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.000000000000001, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.000000000000002, 15.0, 16.0, 17.0, 18.0, 19.0, 20.0]}, "yAxis": {"type": "value", "name": "Amount ($/year)"}, "series": [{"name": "Net Income (Annual)", "type": "line", "data": [49868.0, 49337.6, 48807.2, 48222.8, 47624.4, 47026.0, 46427.6, 45829.2, 45230.8, 44632.4, 44034.0, 43435.6, 42837.2, 42238.8, 41640.4, 41042.0, 40443.6, 39845.2, 39246.8, 38648.4, 38050.0], "smooth": true, "lineStyle": {"width": 3}}, {"name": "401(k) Contribution (Annual)", "type": "line", "data": [0.0, 680.0, 1360.0, 2040.0, 2720.0, 3400.0, 4080.0, 4760.0, 5440.0, 6120.0, 6800.0, 7480.0, 8160.0, 8840.0, 9520.0, 10200.0, 10880.0, 11560.0, 12240.0, 12920.0, 13600.0], "smooth": true}, {"name": "Federal Tax (Annual)", "type": "line", "data": [6130.0, 5980.4, 5830.8, 5735.2, 5653.599999999999, 5572.0, 5490.4, 5408.799999999999, 5327.2, 5245.6, 5164.0, 5082.4, 5000.799999999999, 4919.2, 4837.6, 4756.0, 4674.4, 4592.799999999999, 4511.200000000001, 4429.6, 4348.0], "smooth": true}, {"name": "Total FICA (Annual)", "type": "line", "data": [5202.0, 5202.0, 5202.0, 5202.0, 5202.0, 5202.0, 5202.0, 5202.0, 5202.0, 5202.0, 5202.0, 5202.0, 5202.0, 5202.0, 5202.0, 5202.0, 5202.0, 5202.0, 5202.0, 5202.0, 5202.0], "smooth": true}, {"name": "Roth 401(k) (Annual)", "type": "line", "data": [6800.0, 6800.0, 6800.0, 6800.0, 6800.0, 6800.0, 6800.0, 6800.0, 6800.0, 6800.0, 6800.0, 6800.0, 6800.0, 6800.0, 6800.0, 6800.0, 6800.0, 6800.0, 6800.0, 6800.0, 6800.0], "smooth": true, "lineStyle": {"type": "dashed"}}]};
+    var chartDomM = document.getElementById('echarts_opt_monthly');
+    var myChartM = echarts.init(chartDomM);
+    var optionM = {"title": {"text": "401(k) Contribution vs. Take-home Pay, Tax, FICA, and Roth 401(k) (Monthly) | Filing Status: Single | Gross Income: $68,000 | Roth 401k: 10% ($6,800/year)", "left": "center"}, "tooltip": {"trigger": "axis", "axisPointer": {"type": "cross"}}, "legend": {"data": ["Net Income (Monthly)", "401(k) Contribution (Monthly)", "Federal Tax (Monthly)", "Total FICA (Monthly)", "Roth 401(k) (Monthly)"], "top": 30}, "toolbox": {"feature": {"saveAsImage": {}}}, "xAxis": {"type": "category", "name": "401(k) Contribution Rate (%)", "data": [0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.000000000000001, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.000000000000002, 15.0, 16.0, 17.0, 18.0, 19.0, 20.0]}, "yAxis": {"type": "value", "name": "Amount ($/month)"}, "series": [{"name": "Net Income (Monthly)", "type": "line", "data": [4155.666666666667, 4111.466666666666, 4067.2666666666664, 4018.566666666667, 3968.7000000000003, 3918.8333333333335, 3868.9666666666667, 3819.1, 3769.2333333333336, 3719.366666666667, 3669.5, 3619.633333333333, 3569.7666666666664, 3519.9, 3470.0333333333333, 3420.1666666666665, 3370.2999999999997, 3320.433333333333, 3270.566666666667, 3220.7000000000003, 3170.8333333333335], "smooth": true, "lineStyle": {"width": 3}}, {"name": "401(k) Contribution (Monthly)", "type": "line", "data": [0.0, 56.666666666666664, 113.33333333333333, 170.0, 226.66666666666666, 283.3333333333333, 340.0, 396.6666666666667, 453.3333333333333, 510.0, 566.6666666666666, 623.3333333333334, 680.0, 736.6666666666666, 793.3333333333334, 850.0, 906.6666666666666, 963.3333333333334, 1020.0, 1076.6666666666667, 1133.3333333333333], "smooth": true}, {"name": "Federal Tax (Monthly)", "type": "line", "data": [510.8333333333333, 498.3666666666666, 485.90000000000003, 477.93333333333334, 471.13333333333327, 464.3333333333333, 457.5333333333333, 450.7333333333333, 443.93333333333334, 437.1333333333334, 430.3333333333333, 423.5333333333333, 416.7333333333333, 409.93333333333334, 403.1333333333334, 396.3333333333333, 389.5333333333333, 382.7333333333333, 375.9333333333334, 369.1333333333334, 362.3333333333333], "smooth": true}, {"name": "Total FICA (Monthly)", "type": "line", "data": [433.5, 433.5, 433.5, 433.5, 433.5, 433.5, 433.5, 433.5, 433.5, 433.5, 433.5, 433.5, 433.5, 433.5, 433.5, 433.5, 433.5, 433.5, 433.5, 433.5, 433.5], "smooth": true}, {"name": "Roth 401(k) (Monthly)", "type": "line", "data": [566.6666666666666, 566.6666666666666, 566.6666666666666, 566.6666666666666, 566.6666666666666, 566.6666666666666, 566.6666666666666, 566.6666666666666, 566.6666666666666, 566.6666666666666, 566.6666666666666, 566.6666666666666, 566.6666666666666, 566.6666666666666, 566.6666666666666, 566.6666666666666, 566.6666666666666, 566.6666666666666, 566.6666666666666, 566.6666666666666, 566.6666666666666], "smooth": true, "lineStyle": {"type": "dashed"}}]};
+    myChartA.setOption(optionA);
+    myChartM.setOption(optionM);
+    // Link axis pointers and tooltips
+    myChartA.group = 'echarts_linked';
+    myChartM.group = 'echarts_linked';
+    echarts.connect('echarts_linked');
+    </script>
+    <div style="margin-top:20px; font-size:1.1em; color:#333;">
+        <b>Filing Status:</b> Single &nbsp; | &nbsp; 
+        <b>Gross Income:</b> $68,000 &nbsp; | &nbsp; 
+        <b>Roth 401(k):</b> 10% ($6,800/year)
+    </div>
+</body>
+</html>
